@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "name": "Flipkart",
+    "path": "/companies/flipkart.svg"
+  },
+  {
+    "id": "2",
+    "name": "Adani",
+    "path": "/companies/adani.svg"
+  },
+  {
+    "id": "3",
+    "name": "Airtel",
+    "path": "/companies/airtel.svg"
+  },
+  {
+    "id": "4",
+    "name": "AiR India",
+    "path": "/companies/air-india.svg"
+  },
+  {
+    "id": "5",
+    "name": "Amul",
+    "path": "/companies/amul.svg"
+  },
+  {
+    "id": "6",
+    "name": "BSNL",
+    "path": "/companies/bsnl.svg"
+  },
+  {
+    "id": "7",
+    "name": "Hero",
+    "path": "/companies/hero.svg"
+  },
+  {
+    "id": "8",
+    "name": "Hindustan Unilever",
+    "path": "/companies/hindustan-unilever.svg"
+  },
+  {
+    "id": "9",
+    "name": "Jio Cinema",
+    "path": "/companies/jiocinema.svg"
+  },
+  {
+    "id": "10",
+    "name": "Mahindra",
+    "path": "/companies/mahindra.svg"
+  },
+  {
+    "id": "11",
+    "name": "Meesho",
+    "path": "/companies/meesho.svg"
+  },
+  {
+    "id": "12",
+    "name": "Myntra",
+    "path": "/companies/myntra.svg"
+  },
+  {
+    "id": "13",
+    "name": "PhonePe",
+    "path": "/companies/phonepe.svg"
+  },
+  {
+    "id": "14",
+    "name": "Tata",
+    "path": "/companies/tata.svg"
+  },
+  {
+    "id": "15",
+    "name": "Vercel",
+    "path": "/companies/vercel.svg"
+  }
+]

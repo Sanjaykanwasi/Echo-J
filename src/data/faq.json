@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is Echo J?",
+    "answer": "Echo J is a Job Portal Application that allows companies to post job listings and users to search and apply for jobs. It offers a seamless experience for both job seekers and employers with advanced search filters and secure authentication."
+  },
+  {
+    "question": "How do I create an employer account?",
+    "answer": "To create an employer account, click on 'Sign Up' and select 'Employer'. Fill in your company details, verify your email, and start posting job listings."
+  },
+  {
+    "question": "Can I save jobs to apply later?",
+    "answer": "Yes, you can save job listings by clicking the 'Save Job' button on the job listing. Saved jobs can be accessed from your profile under the 'Saved Jobs' section."
+  },
+  {
+    "question": "How do I track my job applications?",
+    "answer": "Job seekers can track the status of their applications from the 'Applications' section in their profile. This section provides updates on the progress of each application."
+  },
+  {
+    "question": "How do I apply for a job?",
+    "answer": "To apply for a job, click on the job listing and follow the application instructions provided. You may need to upload your resume and provide additional information."
+  },
+  {
+    "question": "How can I search for jobs?",
+    "answer": "Job seekers can search for jobs by keywords, location, category, and other filters using the search bar on the homepage or the dedicated job search page."
+  }
+]
