@@ -45,7 +45,7 @@ const JobCard = ({
   }, [savedJob]);
 
   return (
-    <Card className={"bg-[#241C31] border-none !text-white"}>
+    <Card className={"bg-[#241C31] flex flex-col border-none !text-white"}>
       <CardHeader>
         <CardTitle className={"flex justify-between font-bold"}>
           {job.title}{" "}
