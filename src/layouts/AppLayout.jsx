@@ -12,7 +12,7 @@ const AppLayout = () => {
         <Outlet />
       </main>
       <footer className="p-6 text-center bg-[#241C31] mt-10">
-        Made with Sanjay Singh Kanwasi with ❤️
+        Made by Sanjay Singh Kanwasi with ❤️
       </footer>
     </div>
   );
