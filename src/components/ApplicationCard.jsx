@@ -10,6 +10,15 @@ import { Boxes, BriefcaseBusiness, Download, School } from "lucide-react";
 import useFetch from "@/hooks/use-fetch";
 import { updateApplications } from "@/api/apiApplications";
 import { BarLoader } from "react-spinners";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectLabel,
+  SelectGroup,
+  SelectValue,
+} from "@radix-ui/react-select";
 
 const ApplicationCard = ({ application, isCandidate = false }) => {
   const handleDownload = () => {
@@ -63,13 +72,53 @@ const ApplicationCard = ({ application, isCandidate = false }) => {
           </div>
           <hr />
         </CardContent>
-        <CardFooter>
-          {!isCandidate ? (
+        <CardFooter className={"flex justify-between"}>
+          <span>{new Date(application?.created_at).toLocaleString()}</span>
+          {isCandidate ? (
             <span className="capitalize font-bold ">
               Status: {application?.status}
             </span>
           ) : (
-            <></>
+            <Select
+              onValueChange={handleStatusChange}
+              defaultValue={application?.status}
+            >
+              <SelectTrigger className="w-52 border p-5 rounded-md bg-[#241C31] cursor-pointer">
+                <SelectValue
+                  className="!text-white"
+                  placeholder={application?.status}
+                />
+              </SelectTrigger>
+              <SelectContent
+                position="popper"
+                className="w-52 border p-5 rounded-md bg-[#241C31] cursor-pointer"
+              >
+                <SelectItem
+                  className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
+                  value="Applied"
+                >
+                  Applied
+                </SelectItem>
+                <SelectItem
+                  className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
+                  value="Interviewing"
+                >
+                  Interviewing
+                </SelectItem>
+                <SelectItem
+                  className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
+                  value="Hired"
+                >
+                  Hired
+                </SelectItem>
+                <SelectItem
+                  className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
+                  value="Rejected"
+                >
+                  Rejected
+                </SelectItem>
+              </SelectContent>
+            </Select>
           )}
         </CardFooter>
       </Card>
