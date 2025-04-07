@@ -34,9 +34,14 @@ const ApplicationCard = ({ application, isCandidate = false }) => {
       job_id: application.job_id,
     }
   );
-
-  const handleStatusChange = (status) => {
-    fnHiringStatus(status);
+  const [localStatus, setLocalStatus] = React.useState(application?.status);
+  // const handleStatusChange = (status) => {
+  //   fnHiringStatus(status);
+  // };
+  const handleStatusChange = (e) => {
+    const newStatus = e.target.value;
+    setLocalStatus(newStatus); //  update UI immediately
+    fnHiringStatus(newStatus); // update backend
   };
 
   return (
@@ -79,46 +84,56 @@ const ApplicationCard = ({ application, isCandidate = false }) => {
               Status: {application?.status}
             </span>
           ) : (
-            <Select
-              onValueChange={handleStatusChange}
-              defaultValue={application?.status}
+            // <Select
+            //   onValueChange={handleStatusChange}
+            //   defaultValue={application?.status}
+            // >
+            //   <SelectTrigger className="w-52 border p-5 rounded-md bg-[#241C31] cursor-pointer">
+            //     <SelectValue
+            //       className="!text-white"
+            //       placeholder={application?.status}
+            //     />
+            //   </SelectTrigger>
+            //   <SelectContent
+            //     position="popper"
+            //     className="w-52 border p-5 rounded-md bg-[#241C31] cursor-pointer"
+            //   >
+            //     <SelectItem
+            //       className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
+            //       value="Applied"
+            //     >
+            //       Applied
+            //     </SelectItem>
+            //     <SelectItem
+            //       className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
+            //       value="Interviewing"
+            //     >
+            //       Interviewing
+            //     </SelectItem>
+            //     <SelectItem
+            //       className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
+            //       value="Hired"
+            //     >
+            //       Hired
+            //     </SelectItem>
+            //     <SelectItem
+            //       className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
+            //       value="Rejected"
+            //     >
+            //       Rejected
+            //     </SelectItem>
+            //   </SelectContent>
+            // </Select>
+            <select
+              value={localStatus}
+              onChange={handleStatusChange}
+              className="w-44 border px-4 py-2 rounded-md bg-[#241C31] text-white cursor-pointer"
             >
-              <SelectTrigger className="w-52 border p-5 rounded-md bg-[#241C31] cursor-pointer">
-                <SelectValue
-                  className="!text-white"
-                  placeholder={application?.status}
-                />
-              </SelectTrigger>
-              <SelectContent
-                position="popper"
-                className="w-52 border p-5 rounded-md bg-[#241C31] cursor-pointer"
-              >
-                <SelectItem
-                  className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
-                  value="Applied"
-                >
-                  Applied
-                </SelectItem>
-                <SelectItem
-                  className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
-                  value="Interviewing"
-                >
-                  Interviewing
-                </SelectItem>
-                <SelectItem
-                  className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
-                  value="Hired"
-                >
-                  Hired
-                </SelectItem>
-                <SelectItem
-                  className="p-1 hover:bg-gray-600 cursor-pointer rounded-md"
-                  value="Rejected"
-                >
-                  Rejected
-                </SelectItem>
-              </SelectContent>
-            </Select>
+              <option value="Applied">Applied</option>
+              <option value="Interviewing">Interviewing</option>
+              <option value="Hired">Hired</option>
+              <option value="Rejected">Rejected</option>
+            </select>
           )}
         </CardFooter>
       </Card>
